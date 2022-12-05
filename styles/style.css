@@ -1,0 +1,540 @@
+/* Algemene styling */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: TrueLies;
+    src: url(../fonts/True-Lies.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Medium.otf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #023047;
+    width: 100vw;
+    font-family: Montserrat;
+}
+
+
+/* Skills verschijnen animatie */
+@keyframes animatie{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.animatie{
+    animation: animatie 3s infinite;
+} 
+
+
+/* Nav styling */
+nav{
+    height: 10vh;
+}
+
+nav ul{
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 80px;
+    padding-top: 50px;
+}
+
+nav ul li{
+    margin-left: 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+    text-shadow: 0 0 15px #f7af9d;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #f7af9d;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Landingspagina styling*/
+h1, h2{
+    font-family: TrueLies;
+    font-size: 3em;
+    color: white;
+    margin: 5px;
+}
+
+h1{
+    padding-top: 150px;
+}
+
+h2#skills{
+    color: #f7af9d;
+}
+
+section:nth-of-type(1){
+    width: 445px;
+    height: 90vh;
+    margin: 0 auto;
+}
+
+
+/* About pagina styling */
+section:nth-of-type(2){
+    background-color: #bde0fe;
+    display: flex;
+}
+
+h3{
+    font-family: TrueLies;
+    font-size: 3.3em;
+    color: #f7af9d;
+    margin-bottom: 10px;
+    text-shadow: black 0 0 6px;
+}
+
+p{
+    color: #343a40;
+    font-size: 1em;
+    display: inline;
+}
+
+a{
+   color: #343a40;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+}
+
+article:nth-of-type(2) ul li:before{
+    content: '';
+    width: .5em;
+    height: .5em;
+    background-color: #343a40;
+    position: absolute;
+    list-style: none;
+    left: -1em;
+    top: .3em;
+    border-radius: 41% 59% 83% 17% / 50% 24% 76% 50% ;
+    box-shadow: 0 0 5px #f7af9d;
+}
+
+div#containerSkills{
+    display: flex;
+}
+
+div#containerSkills ul:nth-of-type(2){
+    margin-left: 30px;
+}
+
+
+/* About pagina tekst styling */
+div.containerAbout{
+    width: 50vw;
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+
+div.containerAbout article:nth-of-type(2), div.containerAbout article:nth-of-type(3){
+    margin-top: 50px;
+}
+
+div.containerAbout article:nth-of-type(3){
+    margin-bottom: 50px;
+}
+
+div.containerAbout article:nth-of-type(2) ul li{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* About pagina coding progress styling */
+div#progressHtml{
+    background: linear-gradient(to right, #f7af9d 0%, #f7af9d 90%, #343a40 90%);
+    width: 350px;
+    height: 20px;
+    border: 4px solid #343a40;
+    border-radius: 3% 3% 3% 3% / 50% 50% 50% 50%;
+    margin-bottom: 10px;
+}
+
+div#progressCss{
+    background: linear-gradient(to right, #f7af9d 0%, #f7af9d 90%, #343a40 90%);
+    width: 350px;
+    height: 20px;
+    border: 4px solid #343a40;
+    border-radius: 3% 3% 3% 3% / 50% 50% 50% 50%;
+    margin-bottom: 10px;
+}
+
+div#progressJs{
+    background: linear-gradient(to right, #f7af9d 0%, #f7af9d 70%, #343a40 70%);
+    width: 350px;
+    height: 20px;
+    border: 4px solid #343a40;
+    border-radius: 3% 3% 3% 3% / 50% 50% 50% 50%; 
+}
+
+
+
+
+/* Foto border animatie hover*/
+img#portretMobiel{
+    display: none;
+}
+
+img#portretDesktop{
+    width: 30vw;
+    border: #343a40 solid 4px;
+    box-shadow: 15px 15px 0 -4px #bde0fe, 15px 15px #343a40;
+    transition: .5s;
+    display: block;
+    margin: 0 auto;
+}
+
+img#portretDesktop:hover{
+    box-shadow: 20px 20px 0 -4px #bde0fe, 20px 20px #343a40;
+    transition: .5s;
+}
+
+
+/* Scroll based animations */
+.scrollAnimatie1{
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 2s;
+}
+
+.animatie1{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.work{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 2s;
+}
+
+.animatie2{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+/* Work pagina styling */
+p.titel{
+    background-color: #f7af9d;
+    position: absolute;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 5px 0 5px 0;
+    width: 100%;
+    bottom: 4px;
+    left: 0;
+    opacity: 1;
+    transition: .5s;
+}
+
+div.containerWork{
+    padding-left: 80px;
+    padding-top: 60px;
+}
+
+ul.work{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+
+ul.work li{
+    overflow: hidden;
+    width: 23vw;
+    margin: 10px 30px 20px 0;
+    min-width: 200px;
+    /* width: 300px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 30px; */
+}
+
+img.work{
+    width: 100%;
+    position: relative;
+    filter: blur(1px);
+    transition: .5s;
+}
+
+
+/* Animatie work */
+ul.work li:hover .titel{
+    opacity: .5;
+    transform: translateY(40px);
+    transition: .5s;
+}
+
+ul.work li:hover .work{
+    filter: blur(0);
+    transition: .5s;
+    transform: scale(1.05);
+}
+
+
+/* Contact pagina styling */
+h3#contact{
+    padding-left: 80px;
+    padding-top: 60px;
+}
+
+section:nth-of-type(4){
+    background-color: #bde0fe;
+    height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0 0 20px #343a40;
+    margin: 80px auto 0 auto;
+}
+
+div.form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+label{
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+input{
+    margin-bottom: 30px;
+    padding: 5px 2px 5px 2px;
+    font-family: inherit;
+    border: none;
+    background-color: inherit;
+}
+
+div:nth-of-type(1) input{
+    text-transform: capitalize;
+}
+
+div.form::after{
+    content: '';
+    position: absolute;
+    top: 50px;
+    background-color: #343a40;
+    width: 100%;
+    height: 2px;
+}
+
+div.form:nth-of-type(3)::after{
+    content: '';
+    position: absolute;
+    top: 59px;
+    background-color: #343a40;
+    width: 100%;
+    height: 2px;
+}
+
+textarea{
+    resize: none;
+    margin-bottom: 50px;
+    font-family: inherit;
+    border: none;
+    background-color: inherit;
+}
+
+button{
+    background-color: #f7af9d;
+    border: #343a40 solid 2px;
+    padding: 10px 0 10px 0;
+    position: relative;
+    font-size: 1.1em;
+    color: #343a40;
+}
+
+.transition{
+    transition: 1s;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: .5s;
+    top: -11px;
+    left: -11px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+button:hover::after{
+    width: 35px;
+    height: 35px;
+    border-color: #222222;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: .5s;
+    bottom: -11px;
+    right: -11px;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+button:hover::before{
+    width: 35px;
+    height: 35px;
+    border-color: #343a40;
+}
+
+
+
+
+/* Mediaqueries responsive */
+@media only screen and (max-width: 1060px){
+    div#containerSkills{
+        width: 448px;
+    }
+    p.titel{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    div.containerAbout{
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 819px){
+    ul.work li{
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    nav ul{
+        margin-right: 50px;
+        padding-top: 30px;
+    }
+    img#portretDesktop{
+        display: none;
+    }
+    img#portretMobiel{
+        display: block;
+        width: 50vw;
+        border: #343a40 solid 4px;
+        box-shadow: 15px 15px 0 -4px #bde0fe, 15px 15px #343a40;
+        transition: .5s;
+        display: block;
+        margin: 50px 0 10px 0;
+    }
+    div.containerAbout{
+        width: 70vw;
+        margin: 60px auto 0 auto;
+    }
+    div.containerAbout:nth-of-type(2){
+        display: none;
+    }
+    div#progressHtml, div#progressCss, div#progressJs{
+        width: 50vw;
+        min-width: 270px;
+    } 
+}
+
+
+@media only screen and (max-width: 650px){
+    ul.work li{
+        width: 30vw;
+    }
+    form.contact{
+        margin-left: 80px;
+        width: 65vw;
+    }
+
+}
+
+@media only screen and (max-width: 589px){
+    ul.work li{
+        width: 65vw;
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    h3{
+        font-size: 3em;
+    }
+    div#containerSkills{
+        flex-direction: column;
+    }
+    div#containerSkills ul:nth-of-type(2){
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    h2{
+        font-size: 2.5em;
+    }
+    section:nth-of-type(1){
+        width: 380px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    h2{
+        font-size: 2.3em;
+    }
+    section:nth-of-type(1){
+        width: 348px;
+    }
+}

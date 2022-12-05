@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#023047">
+    <meta name="msapplication-TileColor" content="#023047">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Hi,</h1>
+            <h2>I'm Joep Klaassen,</h2>
+            <h2 id="skills">UX / UI designer</h2>
+        </section>
+        <section id="about">
+            <div class="containerAbout">
+                <article class="scrollAnimatie1">
+                    <h3>About</h3>
+                    <p>I'm currently studying </p> 
+                    <a href="https://www.hva.nl/opleiding/communication-and-multimedia-design/communication-and-multimedia-design.html" target="_blank">Communication & Multimedia Design</a>
+                    <p>in Amsterdam. The focus of this study lies mostly in design and webdevelopment. It's a study that covers a lot of designing aspects. There are programs for the psychological aspect, graphic, web architecture, interaction, user experience and coding.  During this study I have developed an interest in frontend development. I'm currently in my third year, and finished the minor: Web design & Development. </p>
+                    <img src="images/portret.jpg" alt="portret" id="portretMobiel">
+                </article>
+                <article class="scrollAnimatie1">
+                    <h3>Skills</h3>
+                    <div id="containerSkills">
+                        <ul>
+                            <li><p>Responsive webdevelopment</p></li>
+                            <li><p>User interaction</p></li>
+                            <li><p>Web design</p></li>
+                        </ul>
+                        <ul>
+                            <li><p>Accessibility</p></li>
+                            <li><p>Semantic coding</p></li>
+                            <li><p>Graphic design</p></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="scrollAnimatie1">
+                    <h3>Coding</h3>
+                    <ul>
+                        <li><p>HTML</p></li>
+                        <li><div id="progressHtml"></div></li>
+                        <li><p>CSS</p></li>
+                        <li><div id="progressCss"></div></li>
+                        <li><p>JS</p></li>
+                        <li><div id="progressJs"></div></li>
+                    </ul>
+                </article>
+            </div>
+            <div class="containerAbout">
+                <img src="images/portret.jpg" alt="portret" id="portretDesktop">
+            </div>
+        </section>
+        <section id="work">
+            <div class="containerWork">
+                <h3>Work</h3>
+                <ul class="work">
+                    <li><a href="https://github.com/Joepkl/progressive-web-apps-2122" target="blank"><img src="images/rijksmuseum.png" alt="Project Rijksmuseum" class="work"></a><p class="titel">Project Rijksmuseum</p></li>
+                    <li><a href="https://github.com/Joepkl/Discover" target="blank"><img src="images/discover.png" alt="Project Discover" class="work"></a><p class="titel">Project Discover</p></li>
+                    <li><a href="https://github.com/Joepkl/browser-technologies-2122" target="blank"><img src="images/browsertechnologies.png" alt="Browser technologies" class="work"></a><p class="titel">Browsertechnologies</p></li>
+                    <li><a href="files/projectweb.pdf" target="blank"><img src="images/projectweb.png" alt="Project web" class="work"></a><p class="titel">Project web</p></li>
+                    <li><a href="files/vormgeving.pdf" target="blank"><img src="images/vormgeving.png" alt="Vormgeving" class="work"></a><p class="titel">Vormgeving 2</p></li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <h3 id="contact">Contact</h3>
+            <form action="https://formsubmit.co/c8ac03b15a0eca25122aaeaf09665200" method="POST" class="contact">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required autocomplete="off">
+                </div>
+                <div class="form">
+                    <label for="message">Message</label>
+                    <textarea name="message" cols="30" rows="2" id="message" required></textarea>
+                </div>
+                <button type="submit">Send me a message</button>
+            </form>
+        </section>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
